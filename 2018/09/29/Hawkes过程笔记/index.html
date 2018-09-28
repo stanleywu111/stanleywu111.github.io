@@ -79,12 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="咆哮的宽客">
-<meta property="og:url" content="stanleywu111.github.io/index.html">
+<meta name="description" content="基本概念点过程点过程定义有一系列的非负随机变量$\left { Tk \right }{k=1,2,\cdots}$对所有$k$都有$Tk \leq T{k+1}$Counting Process定义$$N(t)=\sum{k=1,2,\cdots}\mathbb{1}{Tk \leq t}$$密度函数$$\lim{h \to 0^+} \frac{E(N(t,t+h])}{h}$$
+泊松过程指数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hawkes过程笔记">
+<meta property="og:url" content="stanleywu111.github.io/2018/09/29/Hawkes过程笔记/index.html">
 <meta property="og:site_name" content="咆哮的宽客">
+<meta property="og:description" content="基本概念点过程点过程定义有一系列的非负随机变量$\left { Tk \right }{k=1,2,\cdots}$对所有$k$都有$Tk \leq T{k+1}$Counting Process定义$$N(t)=\sum{k=1,2,\cdots}\mathbb{1}{Tk \leq t}$$密度函数$$\lim{h \to 0^+} \frac{E(N(t,t+h])}{h}$$
+泊松过程指数">
+<meta property="og:updated_time" content="2018-09-28T17:11:53.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="咆哮的宽客">
+<meta name="twitter:title" content="Hawkes过程笔记">
+<meta name="twitter:description" content="基本概念点过程点过程定义有一系列的非负随机变量$\left { Tk \right }{k=1,2,\cdots}$对所有$k$都有$Tk \leq T{k+1}$Counting Process定义$$N(t)=\sum{k=1,2,\cdots}\mathbb{1}{Tk \leq t}$$密度函数$$\lim{h \to 0^+} \frac{E(N(t,t+h])}{h}$$
+泊松过程指数">
 
 
 
@@ -114,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="stanleywu111.github.io/"/>
+  <link rel="canonical" href="stanleywu111.github.io/2018/09/29/Hawkes过程笔记/"/>
 
 
 
 
 
-  <title>咆哮的宽客</title>
+  <title>Hawkes过程笔记 | 咆哮的宽客</title>
   
 
 
@@ -139,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,9 +219,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -245,9 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/29/Hawkes过程笔记/" itemprop="url">Hawkes过程笔记</a></h1>
+          <h1 class="post-title" itemprop="name headline">Hawkes过程笔记</h1>
         
 
         <div class="post-meta">
@@ -297,9 +301,7 @@
       
 
       
-        
-          
-            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="点过程"><a href="#点过程" class="headerlink" title="点过程"></a>点过程</h2><p>点过程定义<br>有一系列的非负随机变量$\left { T<em>k \right }</em>{k=1,2,\cdots}$对所有$k$都有$T<em>k \leq T</em>{k+1}$<br>Counting Process定义<br>$$N(t)=\sum<em>{k=1,2,\cdots}\mathbb{1}</em>{T<em>k \leq t}$$<br>密度函数<br>$$\lim</em>{h \to 0^+} \frac{E(N(t,t+h])}{h}$$</p>
+        <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="点过程"><a href="#点过程" class="headerlink" title="点过程"></a>点过程</h2><p>点过程定义<br>有一系列的非负随机变量$\left { T<em>k \right }</em>{k=1,2,\cdots}$对所有$k$都有$T<em>k \leq T</em>{k+1}$<br>Counting Process定义<br>$$N(t)=\sum<em>{k=1,2,\cdots}\mathbb{1}</em>{T<em>k \leq t}$$<br>密度函数<br>$$\lim</em>{h \to 0^+} \frac{E(N(t,t+h])}{h}$$</p>
 <h2 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h2><h3 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h3><p>指数分布PDF<br>$$<br>f(x)=\left{\begin{matrix}<br> \lambda e^{-\lambda x}&amp; if \quad x \geq 0\<br> 0 &amp; if \quad x &lt; 0<br>\end{matrix}\right.<br>$$<br>指数分布CDF<br>$$<br>F(x)=\int_{-\infty }^{x}f(y)dy =\left{\begin{matrix}<br> 1- e^{-\lambda x}&amp; if \quad x \geq 0\<br> 0 &amp; if \quad x &lt; 0<br>\end{matrix}\right.<br>$$<br>参数$\lambda$<br>$$E[X] = \frac{1}{\lambda}$$<br>泊松分布<br>$$P\left { X = n \right } = \frac{e^{-\lambda}\lambda^n}{n!}$$<br>参数$\lambda$<br>$$E[X] = \lambda$$</p>
 <h3 id="齐次泊松过程"><a href="#齐次泊松过程" class="headerlink" title="齐次泊松过程"></a>齐次泊松过程</h3><p>定义</p>
 <ol>
@@ -330,8 +332,6 @@
 <li>$$P\left { N(t+h) - N(t) \geq 2 \right } = o(h) $$</li>
 </ol>
 <h3 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h3>
-          
-        
       
     </div>
     
@@ -348,132 +348,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="stanleywu111.github.io/2018/09/28/二阶抛物线型方程的粘性解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="shithead">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咆哮的宽客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/28/二阶抛物线型方程的粘性解/" itemprop="url">二阶偏微分方程的粘性解</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T23:24:57+08:00">
-                2018-09-28
-              </time>
+              <a href="/2018/09/28/二阶抛物线型方程的粘性解/" rel="next" title="二阶偏微分方程的粘性解">
+                <i class="fa fa-chevron-left"></i> 二阶偏微分方程的粘性解
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>二阶偏微分方程的粘性解</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -483,129 +379,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="stanleywu111.github.io/2017/12/16/TCP-IP详解卷1笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="shithead">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咆哮的宽客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/TCP-IP详解卷1笔记/" itemprop="url">TCP/IP详解卷1笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-16T02:00:43+08:00">
-                2017-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Internet地址结构"><a href="#Internet地址结构" class="headerlink" title="Internet地址结构"></a>Internet地址结构</h2>
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -613,6 +391,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -633,8 +415,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -678,6 +469,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#点过程"><span class="nav-number">1.1.</span> <span class="nav-text">点过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泊松过程"><span class="nav-number">1.2.</span> <span class="nav-text">泊松过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指数分布"><span class="nav-number">1.2.1.</span> <span class="nav-text">指数分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#齐次泊松过程"><span class="nav-number">1.2.2.</span> <span class="nav-text">齐次泊松过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非齐次泊松过程"><span class="nav-number">1.2.3.</span> <span class="nav-text">非齐次泊松过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自激点过程"><span class="nav-number">1.3.</span> <span class="nav-text">自激点过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#带有指数核的Hawkes过程"><span class="nav-number">2.</span> <span class="nav-text">带有指数核的Hawkes过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单变量Hawkes过程"><span class="nav-number">2.1.</span> <span class="nav-text">单变量Hawkes过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大似然估计"><span class="nav-number">2.1.1.</span> <span class="nav-text">最大似然估计</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -811,6 +618,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
